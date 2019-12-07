@@ -2,7 +2,7 @@
 
 # Info
   - This script install Entware-ng, create and mount /opt parttion in /jffs/opt and add mount to autostart
-  - Tested on Netgear R6400v2 (DD-WRT v3.0-r37305)
+  - Tested on Netgear R6400v2 (DD-WRT v3.0-r40559)
 
 # USB Requirements
  - Mounted JFFS partition
