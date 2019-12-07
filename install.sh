@@ -24,7 +24,7 @@
 echo -e "\e[92;1;48;5;239m ====================================== \e[0m"
 echo -e "\e[92;1;48;5;240m |  DD-WRT EASY ENTWARE-NG INSTALLER  | \e[0m"
 echo -e "\e[92;1;48;5;241m |  \e[94;1;48;5;241mMateusz Dera  \e[92;1;48;5;241m                    | \e[0m"
-echo -e "\e[92;1;48;5;240m | \e[94;1;48;5;240m Version:\e[92;1;48;5;240m 1.0                      | \e[0m"
+echo -e "\e[92;1;48;5;240m | \e[94;1;48;5;240m Version:\e[92;1;48;5;240m 1.1                      | \e[0m"
 echo -e "\e[92;1;48;5;239m ====================================== \e[0m"
 
 echo
@@ -63,7 +63,7 @@ if ! [ -x "$(command -v /opt/bin/ipkg update)" ]; then
 fi
 
 export PATH=$PATH:/opt/bin:/opt/sbin || exit 1
-/opt/bin/ipkg update || exit 1
+opkg update || exit 1
 
 cd /jffs/etc/config || exit 1
 [ -f ./automatic_opt_mount.startup ] && rm automatic_opt_mount.startup
