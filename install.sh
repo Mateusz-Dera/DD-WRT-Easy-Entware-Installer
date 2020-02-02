@@ -43,7 +43,11 @@ if ! [ -d "/jffs/etc/config" ]; then
    mkdir /jffs/etc/config || exit 1
 fi
 
-mount -o bind /jffs/opt/ /opt/ || exit 1
+if grep /opt /proc/mounts > /dev/null 2>&1; then
+        echo "opt is mounted"
+else
+        mount -o bind /jffs/opt/ /opt/ || exit 1
+fi
 
 if ! [ -x "$(command -v /opt/bin/ipkg update)" ]; then
    echo -e "\e[92;1;48;5;239m ================================ \e[0m"
