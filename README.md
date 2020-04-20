@@ -13,6 +13,7 @@
 ### Installation
 
  ```bash
- cd /jffs    
-curl -kLO https://raw.githubusercontent.com/Mateusz-Dera/DD-WRT-Easy-Entware-ng-Installer/master/install.sh && sh ./install.sh
+cd /jffs    
+curl -kLO https://raw.githubusercontent.com/Mateusz-Dera/DD-WRT-Easy-Entware-ng-Installer/master/install.sh 
+sh ./install.sh
  ```
