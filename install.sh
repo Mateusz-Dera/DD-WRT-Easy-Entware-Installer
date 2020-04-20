@@ -24,7 +24,7 @@
 echo -e "\e[92;1;48;5;239m ====================================== \e[0m"
 echo -e "\e[92;1;48;5;240m |  DD-WRT EASY ENTWARE-NG INSTALLER  | \e[0m"
 echo -e "\e[92;1;48;5;241m |  \e[94;1;48;5;241mMateusz Dera  \e[92;1;48;5;241m                    | \e[0m"
-echo -e "\e[92;1;48;5;240m | \e[94;1;48;5;240m Version:\e[92;1;48;5;240m 1.1                      | \e[0m"
+echo -e "\e[92;1;48;5;240m | \e[94;1;48;5;240m Version:\e[92;1;48;5;240m 2.0                      | \e[0m"
 echo -e "\e[92;1;48;5;239m ====================================== \e[0m"
 
 echo
@@ -48,17 +48,20 @@ mount -o bind /jffs/opt /opt
 if ! [ -x "$(command -v /opt/bin/ipkg update)" ]; then
    echo -e "\e[92;1;48;5;239m ================================ \e[0m"
    echo -e "\e[92;1;48;5;240m |  SELECT ROUTER ARCHITECTURE  | \e[0m"
-   echo -e "\e[92;1;48;5;242m | \e[94;1;48;5;242m 0\e[92;1;48;5;242m ARM                       | \e[0m"
-   echo -e "\e[92;1;48;5;243m | \e[94;1;48;5;243m 1\e[92;1;48;5;243m MIPS                      | \e[0m"
+   echo -e "\e[92;1;48;5;242m | \e[94;1;48;5;242m 0\e[92;1;48;5;242m ARMv7                     | \e[0m"
+   echo -e "\e[92;1;48;5;243m | \e[94;1;48;5;243m 1\e[92;1;48;5;243m Broadcom                  | \e[0m"
+   echo -e "\e[92;1;48;5;243m | \e[94;1;48;5;243m 2\e[92;1;48;5;243m Atheros                   | \e[0m"
    echo -e "\e[92;1;48;5;239m ================================ \e[0m\n"
    read -p $'Number (Default 0): ' arch
 
    case $arch in
-   "1") link="http://pkg.entware.net/binaries/mipsel/installer/installer.sh" ;;
-   *) link="http://pkg.entware.net/binaries/armv7/installer/entware_install.sh"
+   "1") link="http://bin.entware.net/mipselsf-k3.4/installer/generic.sh" ;;
+   "2") link="http://bin.entware.net/mipssf-k3.4/installer/generic.sh" ;;
+   *) link="http://bin.entware.net/armv7sf-k3.2/installer/generic.sh"
    esac
   
-   wget -O - $link | sh || exit 1
+   wget $link || exit 1
+   sh generic.sh || exit 1
 
 fi
 
