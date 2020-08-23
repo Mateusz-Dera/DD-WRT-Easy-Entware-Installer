@@ -1,7 +1,7 @@
 # DD-WRT Easy Entware-ng Installer
 
 ### Info
-![version](https://img.shields.io/badge/version-2.0.0-yellow.svg)
+![version](https://img.shields.io/badge/version-2.0.1-yellow.svg)
 
   - This script install Entware-ng, create and mount /opt parttion in /jffs/opt and add mount to autostart
   - Tested on Netgear R6400v2 (DD-WRT v3.0-r41813 std)
