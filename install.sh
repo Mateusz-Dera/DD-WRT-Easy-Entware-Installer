@@ -24,7 +24,7 @@
 echo -e "\e[92;1;48;5;239m ====================================== \e[0m"
 echo -e "\e[92;1;48;5;240m |  DD-WRT EASY ENTWARE-NG INSTALLER  | \e[0m"
 echo -e "\e[92;1;48;5;241m |  \e[94;1;48;5;241mMateusz Dera  \e[92;1;48;5;241m                    | \e[0m"
-echo -e "\e[92;1;48;5;240m | \e[94;1;48;5;240m Version:\e[92;1;48;5;240m 2.0.0                    | \e[0m"
+echo -e "\e[92;1;48;5;240m | \e[94;1;48;5;240m Version:\e[92;1;48;5;240m 2.0.1                    | \e[0m"
 echo -e "\e[92;1;48;5;239m ====================================== \e[0m"
 
 echo
@@ -45,7 +45,7 @@ fi
 
 mount -o bind /jffs/opt /opt
 
-if ! [ -x "$(command -v /opt/bin/ipkg update)" ]; then
+if ! [ -x "$(command -v /opt/bin/opkg update)" ]; then
    echo -e "\e[92;1;48;5;239m ================================ \e[0m"
    echo -e "\e[92;1;48;5;240m |  SELECT ROUTER ARCHITECTURE  | \e[0m"
    echo -e "\e[92;1;48;5;242m | \e[94;1;48;5;242m 0\e[92;1;48;5;242m ARMv7                     | \e[0m"
