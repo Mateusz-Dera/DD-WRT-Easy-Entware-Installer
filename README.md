@@ -1,4 +1,4 @@
-# DD-WRT Easy Entware-ng Installer
+# DD-WRT Easy Entware Installer
 
 ### Info
 ![version](https://img.shields.io/badge/version-2.0.1-yellow.svg)
