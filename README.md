@@ -14,6 +14,6 @@
 
  ```bash
 cd /jffs    
-curl -kLO https://raw.githubusercontent.com/Mateusz-Dera/DD-WRT-Easy-Entware-ng-Installer/master/install.sh 
+curl -kLO https://raw.githubusercontent.com/Mateusz-Dera/DD-WRT-Easy-Entware-Installer/DD-WRT-v3.0-r41813-std/install.sh
 sh ./install.sh
  ```
