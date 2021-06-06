@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# DD-WRT DD-WRT Easy Entware-ng Installer
+# DD-WRT DD-WRT Easy Entware Installer
 # Copyright © 2019 Mateusz Dera
 
 # This program is free software: you can redistribute it and/or modify
