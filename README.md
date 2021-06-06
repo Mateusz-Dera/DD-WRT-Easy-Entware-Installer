@@ -1,19 +1,25 @@
-# DD-WRT Easy Entware Installer
+## DD-WRT Easy Entware Installer
 
-### Info
-![version](https://img.shields.io/badge/version-2.0.1-yellow.svg)
+### Info:
+  - This script install Optware-ng
+  - Tested on Netgear R6400v2 (DD-WRT v3.0-r46772 std)
 
-  - This script install Entware-ng, create and mount /opt parttion in /jffs/opt and add mount to autostart
-  - Tested on Netgear R6400v2 (DD-WRT v3.0-r41813 std)
+### USB Requirements:
+ - USB with **ext4** partition named **Optware**
+ - Mounted **/opt** partition (**sda1**)
+ ![USB](https://github.com/Mateusz-Dera/DD-WRT-Easy-Entware-Installer/blob/master/usb.png?raw=true)
 
-### USB Requirements
- - Mounted JFFS partition
- - Optional SWAP partition
 
-### Installation
-
- ```bash
-cd /jffs    
-curl -kLO https://raw.githubusercontent.com/Mateusz-Dera/DD-WRT-Easy-Entware-ng-Installer/master/install.sh 
+### Installation:
+```sh
+cd /jffs
+curl -kLO https://raw.githubusercontent.com/Mateusz-Dera/DD-WRT-Easy-Entware-Installer/master/install.sh
 sh ./install.sh
- ```
+reboot
+```
+
+### Test:
+```sh
+opkg update
+opkg install nano
+```
